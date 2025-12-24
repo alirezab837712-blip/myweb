@@ -25,6 +25,12 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .moving-text {
   display: inline-block;
   padding: 10px 20px;
@@ -32,13 +38,13 @@ body {
   color: green;
   font-size: 24px;
   font-weight: bold;
-  white-space: nowrap;
   animation: move 3s linear infinite;
 }
 
 @keyframes move {
   from { transform: translateX(100%); }
   to   { transform: translateX(-100%); }
+}
 }
 </style>
 <body
@@ -136,6 +142,8 @@ dir="rtl" style="text-align:right">
     </a>
   </p>
 </footer>
-<div class="moving-text">پاینده و پیروز باشید</div>
+<div class="marquee-container">
+  <div class="moving-text">پاینده و پیروز باشید</div>
+</div>
 </body>
 </html>
