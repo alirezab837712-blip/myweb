@@ -25,8 +25,20 @@ body {
   box-sizing: border-box;
   text-align: center;
 }
-body {
-  text-align: center;
+.moving-text {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid green;
+  color: green;
+  font-size: 24px;
+  font-weight: bold;
+  white-space: nowrap;
+  animation: move 3s linear infinite;
+}
+
+@keyframes move {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(-100%); }
 }
 </style>
 <body
@@ -124,8 +136,6 @@ dir="rtl" style="text-align:right">
     </a>
   </p>
 </footer>
-<marquee loop="infinite" bgcolor="green">
-  پاینده و پیروز باشید
-  </marquee> 
+<div class="moving-text">پاینده و پیروز باشید</div>
 </body>
 </html>
